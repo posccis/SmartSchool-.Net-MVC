@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BTdA1fl9o5Df8kfhpD575QA821fCfX98iC/ensa0DxmHPQLQzwibS9MGzhhp1LZFWJHIMPb3AWZqOvPSUzssZQ==",
+  "dgSpecHash": "z/Me4xXFczPvWDm15+bAkO/NODlDcmLbli9IL4pJF7hge7hivbiMqoIeHFwK2PbmM78iDYDMDuQ3SB8AoNgiug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
+  "projectFilePath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\smartschoolapi\\SmartSchoolAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
