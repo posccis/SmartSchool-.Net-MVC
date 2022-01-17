@@ -27,3 +27,10 @@ C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\obj\Debug\net5.
 C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\obj\Debug\net5.0\ref\SmartSchoolAPI.dll
 C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\obj\Debug\net5.0\SmartSchoolAPI.pdb
 C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\obj\Debug\net5.0\SmartSchoolAPI.genruntimeconfig.cache
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Humanizer.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
