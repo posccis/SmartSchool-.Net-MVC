@@ -1298,11 +1298,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
+      "projectUniqueName": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
       "projectName": "SmartSchoolAPI",
-      "projectPath": "c:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
+      "projectPath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
       "packagesPath": "C:\\Users\\lkzq\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\obj\\",
+      "outputPath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lkzq\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1312,6 +1312,7 @@
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DO+c6ljfDu1ji9x5KN2/5u3tiw8eDCgWxk2p5LOeSzc5JTGVhrVKZ3orZcf9pqP8htwyyoP2bWvy4nr5Loaj/A==",
+  "dgSpecHash": "tzx1V9q35mkwHry4wc5bJqr2mWcSWLY7o7O9/pRAPgLtckaEEY/woJw3WW9HB8ZmV+wO0IGKrCV1G30NaVSzJQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
+  "projectFilePath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lkzq\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
