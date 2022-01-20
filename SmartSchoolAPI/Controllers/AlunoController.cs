@@ -16,9 +16,13 @@ namespace SmartSchoolAPI.Controllers
     {
         private readonly SmartContext _context;
 
-        public AlunoController(SmartContext context)
+        public readonly IRepository _repo;
+
+        public AlunoController(SmartContext context,
+                            IRepository repo)
         {
             _context = context;
+            _repo = repo;
         }
 
         [HttpGet]
@@ -57,12 +61,25 @@ namespace SmartSchoolAPI.Controllers
             return StatusCode(StatusCodes.Status201Created);
         }
 
-        [HttpPut]
-        public IActionResult Put(Aluno aluno) 
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, Aluno aluno) 
         {
+            var alu = _context.Alunos.Where(a => a.Id == id);
+            if(alu == null) return StatusCode(StatusCodes.Status404NotFound);
             _context.Alunos.Update(aluno);
             _context.SaveChanges();
             return StatusCode(StatusCodes.Status200OK);
+        }
+
+        [HttpPatch("{id}")]
+        public IActionResult Patch(int id, Aluno aluno) 
+        {
+            if(_context.Alunos.Where(a => a.Id == id) == null) return StatusCode(StatusCodes.Status404NotFound);
+
+            _context.Alunos.Update(aluno);
+            _context.SaveChanges();
+            return StatusCode(StatusCodes.Status200OK);
+            
         }
 
         [HttpDelete("{id}")]
@@ -74,7 +91,7 @@ namespace SmartSchoolAPI.Controllers
 
             _context.Alunos.Remove(aluno);
             _context.SaveChanges();
-            return StatusCode(StatusCodes.Status200OK);
+            return StatusCode(StatusCodes.Status200OK); 
 
         }
 
