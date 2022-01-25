@@ -14,41 +14,30 @@ namespace SmartSchoolAPI.Controllers
     [ApiController]
     public class AlunoController : ControllerBase
     {
-        private readonly SmartContext _context;
+
 
         public readonly IRepository _repo;
 
-        public AlunoController(SmartContext context,
-                            IRepository repo)
+        public AlunoController(IRepository repo)
         {
-            _context = context;
+  
             _repo = repo;
         }
 
         [HttpGet]
         public IActionResult Get() 
         {
-
-            return Ok(_context.Alunos);
+            var result = _repo.GetAlunos(true);
+            return Ok(result);
         }
 
-        [HttpGet("ById")]
+        [HttpGet("{Id}")]
         public IActionResult GetById(int Id) 
         {
-            var aluno = _context.Alunos.Where(a => a.Id == Id);
+            var aluno = _repo.GetAlunoById(Id);
 
             if (aluno == null) return StatusCode(StatusCodes.Status404NotFound);
 
-
-            return Ok(aluno);
-        }
-
-        [HttpGet("ByName")]
-        public IActionResult GetByName(string nome) 
-        { 
-            var aluno = _context.Alunos.Where(a => nome == a.Nome);
-
-            if(aluno == null) return StatusCode(StatusCodes.Status404NotFound);
 
             return Ok(aluno);
         }
@@ -56,42 +45,45 @@ namespace SmartSchoolAPI.Controllers
         [HttpPost]
         public IActionResult Post(Aluno aluno)
         {
-            _context.Alunos.Add(aluno);
-            _context.SaveChanges();
-            return StatusCode(StatusCodes.Status201Created);
+            _repo.Add(aluno);
+            if(_repo.SaveChanges()) return Ok(aluno);
+
+            return StatusCode(StatusCodes.Status400BadRequest);
         }
 
         [HttpPut("{id}")]
         public IActionResult Put(int id, Aluno aluno) 
         {
-            var alu = _context.Alunos.Where(a => a.Id == id);
+            var alu = _repo.GetAlunoById(id);
             if(alu == null) return StatusCode(StatusCodes.Status404NotFound);
-            _context.Alunos.Update(aluno);
-            _context.SaveChanges();
-            return StatusCode(StatusCodes.Status200OK);
+            _repo.Update(aluno);
+            if(_repo.SaveChanges()) return Ok(aluno);
+
+            return StatusCode(StatusCodes.Status400BadRequest);
         }
 
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, Aluno aluno) 
         {
-            if(_context.Alunos.Where(a => a.Id == id) == null) return StatusCode(StatusCodes.Status404NotFound);
+            if(_repo.GetAlunoById(id) == null) return StatusCode(StatusCodes.Status404NotFound);
 
-            _context.Alunos.Update(aluno);
-            _context.SaveChanges();
-            return StatusCode(StatusCodes.Status200OK);
+            _repo.Update(aluno);
+            if(_repo.SaveChanges()) return Ok(aluno);
+
+            return StatusCode(StatusCodes.Status400BadRequest);
             
         }
 
         [HttpDelete("{id}")]
         public IActionResult Delete(int id) 
         {
-            var aluno = _context.Alunos.FirstOrDefault(a => a.Id == id);
+            var aluno = _repo.GetAlunoById(id);
 
             if (aluno == null) return StatusCode(StatusCodes.Status404NotFound);
+            _repo.Delete(aluno);
+            if(_repo.SaveChanges()) return StatusCode(StatusCodes.Status200OK);
 
-            _context.Alunos.Remove(aluno);
-            _context.SaveChanges();
-            return StatusCode(StatusCodes.Status200OK); 
+            return StatusCode(StatusCodes.Status400BadRequest); 
 
         }
 
