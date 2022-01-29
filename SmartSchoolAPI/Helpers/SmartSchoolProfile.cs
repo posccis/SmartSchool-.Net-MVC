@@ -8,6 +8,7 @@ namespace SmartSchoolAPI.Helpers
     {
         public SmartSchoolProfile()
         {
+            //ALUNO Dtos map -->
             CreateMap<Aluno, AlunoDto>()
                 .ForMember(
                     dest => dest.Nome,
@@ -20,6 +21,17 @@ namespace SmartSchoolAPI.Helpers
 
             CreateMap<AlunoDto, Aluno>();
             CreateMap<Aluno, AlunoRegistrarDto>().ReverseMap();
+
+            // <--
+            // PROFESSOR Dtos map--> 
+            CreateMap<Professor, ProfessorDto>()
+                        .ForMember(
+                            dest => dest.Nome,
+                            opt => opt.MapFrom(src => $"{src.Nome} {src.Sobrenome}")
+                        );
+            CreateMap<Professor, ProfessorRegistrarDtos>().ReverseMap();
+
+            // <--
         }
     }
 }

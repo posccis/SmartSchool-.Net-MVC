@@ -12,7 +12,11 @@ using SmartSchoolAPI.Models;
 
 namespace SmartSchoolAPI.Controllers
 {
-    [Route("api/[controller]")]
+    /// <summary>
+    /// 
+    /// </summary>
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class AlunoController : ControllerBase
     {
@@ -21,13 +25,21 @@ namespace SmartSchoolAPI.Controllers
         public readonly IRepository _repo;
         private readonly IMapper _mapper;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="repo"></param>
+        /// <param name="mapper"></param>
         public AlunoController(IRepository repo, IMapper mapper)
         {
   
             _repo = repo;
             _mapper = mapper;
         }
-
+        /// <summary>
+        /// M�todo que ir� retornar todos os alunos
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get() 
         {
@@ -36,6 +48,11 @@ namespace SmartSchoolAPI.Controllers
             return Ok(_mapper.Map<IEnumerable<AlunoDto>>(alunos));
         }
 
+        /// <summary>
+        /// M�todo que ir� retornar o aluno atrav�s da Id
+        /// </summary>
+        /// <param name="Id"></param>
+        /// <returns></returns>
         [HttpGet("{Id}")]
         public IActionResult GetById(int Id) 
         {
@@ -48,6 +65,11 @@ namespace SmartSchoolAPI.Controllers
             return Ok(alunoDto);
         }
 
+        /// <summary>
+        /// M�todo para adicionar um novo aluno
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult Post(AlunoRegistrarDto model)
         {
@@ -58,6 +80,12 @@ namespace SmartSchoolAPI.Controllers
             return StatusCode(StatusCodes.Status400BadRequest);
         }
 
+        /// <summary>
+        /// M�todo para atualizar um aluno
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
         public IActionResult Put(int id, AlunoRegistrarDto model) 
         {
@@ -72,6 +100,12 @@ namespace SmartSchoolAPI.Controllers
             return StatusCode(StatusCodes.Status400BadRequest);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, AlunoRegistrarDto model) 
         {
@@ -86,6 +120,11 @@ namespace SmartSchoolAPI.Controllers
             return StatusCode(StatusCodes.Status400BadRequest);
         }
 
+        /// <summary>
+        /// M�todo respons�vel por remover um aluno.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public IActionResult Delete(int id) 
         {

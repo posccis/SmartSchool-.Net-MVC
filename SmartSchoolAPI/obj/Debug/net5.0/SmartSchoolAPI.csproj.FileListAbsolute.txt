@@ -65,3 +65,6 @@ C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.
 C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
 C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
 C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\SmartSchoolAPI.xml
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.dll
+C:\Users\lkzq\Desktop\Principal\SmartSchool_udemy\SmartSchoolAPI\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll

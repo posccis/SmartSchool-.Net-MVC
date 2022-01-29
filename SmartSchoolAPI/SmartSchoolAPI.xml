@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SmartSchoolAPI</name>
+    </assembly>
+    <members>
+        <member name="T:SmartSchoolAPI.Controllers.AlunoController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.#ctor(SmartSchoolAPI.Data.IRepository,AutoMapper.IMapper)">
+            <summary>
+            
+            </summary>
+            <param name="repo"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.Get">
+            <summary>
+            M�todo que ir� retornar todos os alunos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.GetById(System.Int32)">
+            <summary>
+            M�todo que ir� retornar o aluno atrav�s da Id
+            </summary>
+            <param name="Id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.Post(SmartSchoolAPI.Dtos.AlunoRegistrarDto)">
+            <summary>
+            M�todo para adicionar um novo aluno
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.Put(System.Int32,SmartSchoolAPI.Dtos.AlunoRegistrarDto)">
+            <summary>
+            M�todo para atualizar um aluno
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.Patch(System.Int32,SmartSchoolAPI.Dtos.AlunoRegistrarDto)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.Delete(System.Int32)">
+            <summary>
+            M�todo respons�vel por remover um aluno.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

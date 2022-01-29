@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VxaFRu4dSdkC9Th7oQWVit5Agcbky+ZGt4UZK1w5xUzPnZ/MA/6Dk0430un6ARo7XLbf32xETyzUo9lvw3XaAw==",
+  "dgSpecHash": "S0QekSiBIlSOTfq6Pc6wsBizDJdxREwlBA9uS/7N+1D1RP/zUKOeHJPKwxeZ38ko64pttFdO1Oh6rGhwupORig==",
   "success": true,
   "projectFilePath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\lkzq\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.13\\microsoft.aspnetcore.jsonpatch.5.0.13.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\5.0.13\\microsoft.aspnetcore.mvc.newtonsoftjson.5.0.13.nupkg.sha512",
+    "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning\\4.2.0\\microsoft.aspnetcore.mvc.versioning.4.2.0.nupkg.sha512",
+    "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.aspnetcore.mvc.versioning.apiexplorer\\4.2.0\\microsoft.aspnetcore.mvc.versioning.apiexplorer.4.2.0.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.13\\microsoft.data.sqlite.core.5.0.13.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
