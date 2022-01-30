@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SmartSchoolAPI.Data;
 using SmartSchoolAPI.Dtos;
+using SmartSchoolAPI.Helpers;
 using SmartSchoolAPI.Models;
 
 namespace SmartSchoolAPI.Controllers
@@ -41,11 +42,15 @@ namespace SmartSchoolAPI.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public IActionResult Get() 
+        public async Task<IActionResult> Get([FromQuery]PageParams pageParams) 
         {
-            var alunos = _repo.GetAlunos(true);
+            var alunos = await _repo.GetAlunos(pageParams, true);
 
-            return Ok(_mapper.Map<IEnumerable<AlunoDto>>(alunos));
+            var alunosresult = _mapper.Map<IEnumerable<AlunoDto>>(alunos);
+
+            Response.AddPagination(alunos.CurrentPage, alunos.PageSize, alunos.TotalCount, alunos.TotalPages);
+
+            return Ok(alunosresult);
         }
 
         /// <summary>
