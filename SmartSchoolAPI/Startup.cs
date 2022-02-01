@@ -32,7 +32,11 @@ namespace SmartSchoolAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<SmartContext>(
-                context => context.UseSqlite(Configuration.GetConnectionString("Default"))
+                
+                context => {
+                    string conn = Configuration.GetConnectionString("MySqlConnection");
+                    context.UseMySql(conn , ServerVersion.AutoDetect(conn));
+                }
             );
 
             services.AddControllers()
@@ -96,11 +100,15 @@ namespace SmartSchoolAPI
                                 IWebHostEnvironment env,
                                 IApiVersionDescriptionProvider apiVersionDescriptionProvider)
         {
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c =>{ 
+            }
+            app.UseRouting();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());                        
+                app.UseSwagger()
+                .UseSwaggerUI(c =>{ 
                     
                     foreach (var description in apiVersionDescriptionProvider.ApiVersionDescriptions)
                     {
@@ -109,13 +117,13 @@ namespace SmartSchoolAPI
                     
                                         c.RoutePrefix = "";
                 });
-            }
+            
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
