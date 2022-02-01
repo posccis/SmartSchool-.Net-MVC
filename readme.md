@@ -35,6 +35,9 @@
 
 <p>In this momenet of the course i learned the use of Dto's. They're useful to define how and wich data will be delivered to user. And is also one more layer.</p>
 
+## :point_right: Docker
+<p>I learned the basics of Docker what means the concept of container, volumes and images and also include docker compose. I ran too the MySQL and all the APÍ in a container.</p>
+
 ## :wrench: Controllers
 
 #### :white_circle: Aluno Controller
