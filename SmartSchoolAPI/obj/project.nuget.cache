@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5jKduYjUfd1TYjqpAHPKXXzYVloLI2w7vQ+rZ5IPrp52xu7wb6PdfflWul2M2ZoYr9lJb9bL2ARP7Nr0b1Fzxg==",
+  "dgSpecHash": "iq7tfW2nZ0pL2BYIrT7FYrARV7Kw81O+ZZWktZORLKxvGJGNSXIpSX61n+VVoxuBW/AlmqnOJI2/5+tfZ+5zqw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
+  "projectFilePath": "C:\\users\\lkzq\\desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lkzq\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
     "C:\\Users\\lkzq\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

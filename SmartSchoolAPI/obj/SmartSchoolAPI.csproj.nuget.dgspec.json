@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj": {}
+    "C:\\users\\lkzq\\desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj": {
+    "C:\\users\\lkzq\\desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
+        "projectUniqueName": "C:\\users\\lkzq\\desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
         "projectName": "SmartSchoolAPI",
-        "projectPath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
+        "projectPath": "C:\\users\\lkzq\\desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\SmartSchoolAPI.csproj",
         "packagesPath": "C:\\Users\\lkzq\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lkzq\\Desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\obj\\",
+        "outputPath": "C:\\users\\lkzq\\desktop\\Principal\\SmartSchool_udemy\\SmartSchoolAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lkzq\\AppData\\Roaming\\NuGet\\NuGet.Config",
