@@ -44,7 +44,7 @@
             <param name="model"></param>
             <returns></returns>
         </member>
-        <member name="M:SmartSchoolAPI.Controllers.AlunoController.Patch(System.Int32,SmartSchoolAPI.Dtos.AlunoRegistrarDto)">
+        <member name="M:SmartSchoolAPI.Controllers.AlunoController.Patch(System.Int32,SmartSchoolAPI.Dtos.AlunoPatchDto)">
             <summary>
             
             </summary>
