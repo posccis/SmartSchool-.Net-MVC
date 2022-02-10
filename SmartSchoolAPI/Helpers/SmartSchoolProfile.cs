@@ -21,6 +21,7 @@ namespace SmartSchoolAPI.Helpers
 
             CreateMap<AlunoDto, Aluno>();
             CreateMap<Aluno, AlunoRegistrarDto>().ReverseMap();
+            CreateMap<Aluno, AlunoPatchDto>().ReverseMap();
 
             // <--
             // PROFESSOR Dtos map--> 
@@ -30,6 +31,9 @@ namespace SmartSchoolAPI.Helpers
                             opt => opt.MapFrom(src => $"{src.Nome} {src.Sobrenome}")
                         );
             CreateMap<Professor, ProfessorRegistrarDtos>().ReverseMap();
+
+            CreateMap<DisciplinasDto, Disciplina>().ReverseMap();
+            CreateMap<CursoDto, Curso>().ReverseMap();
 
             // <--
         }

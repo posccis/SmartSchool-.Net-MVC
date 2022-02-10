@@ -65,7 +65,7 @@ namespace SmartSchoolAPI.Controllers
 
             if (aluno == null) return StatusCode(StatusCodes.Status404NotFound);
 
-            var alunoDto = _mapper.Map<AlunoDto>(aluno);
+            var alunoDto = _mapper.Map<AlunoRegistrarDto>(aluno);
 
             return Ok(alunoDto);
         }
@@ -112,7 +112,7 @@ namespace SmartSchoolAPI.Controllers
         /// <param name="model"></param>
         /// <returns></returns>
         [HttpPatch("{id}")]
-        public IActionResult Patch(int id, AlunoRegistrarDto model) 
+        public IActionResult Patch(int id, AlunoPatchDto model) 
         {
             var aluno = _repo.GetAlunoById(id);
             if(aluno == null) return StatusCode(StatusCodes.Status404NotFound);
@@ -120,7 +120,26 @@ namespace SmartSchoolAPI.Controllers
             _mapper.Map(model, aluno);
 
             _repo.Update(aluno);
-            if(_repo.SaveChanges()) return Ok(aluno);
+            if(_repo.SaveChanges()) return Created($"/api/aluno/{model.Id}", _mapper.Map<AlunoPatchDto>(aluno));
+
+            return StatusCode(StatusCodes.Status400BadRequest);
+        }
+
+        // api/aluno/{id}/trocarEstado
+        [HttpPatch("{id}/trocarEstado")]
+        public IActionResult trocarEstado(int id, TrocarEstadoDto trocaEstado) 
+        {
+            var aluno = _repo.GetAlunoById(id);
+
+            if(aluno == null) return StatusCode(StatusCodes.Status404NotFound);
+
+            aluno.Ativo = trocaEstado.Estado;
+
+            _repo.Update(aluno);
+            if(_repo.SaveChanges()) {
+                   var msn = aluno.Ativo ? "ativado" : "desativado";
+                   return Ok(new { message = $"Aluno {msn} com sucesso!"});
+            }
 
             return StatusCode(StatusCodes.Status400BadRequest);
         }

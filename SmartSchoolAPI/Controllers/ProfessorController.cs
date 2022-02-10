@@ -11,7 +11,7 @@ using SmartSchoolAPI.Models;
 
 namespace SmartSchoolAPI.Controllers
 {
-    [ApiVersion("2.0")]
+    [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class ProfessorController : ControllerBase
@@ -35,11 +35,23 @@ namespace SmartSchoolAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById (int id)
         { 
-            var professor = _repo.GetProfessorById(id);
+            var professor = _repo.GetProfessorById(id, true);
 
             if(professor == null) return StatusCode(StatusCodes.Status404NotFound);
 
             var retorno = _map.Map<ProfessorDto>(professor);
+
+            return Ok(retorno);
+        }
+
+        [HttpGet("byaluno/{idAluno}")]
+        public IActionResult GetByAlunoId (int alunoid)
+        { 
+            var professores = _repo.GetProfessorByAlunoId(alunoid, false);
+
+            if(professores == null) return BadRequest("Professores não encontrados");
+
+            var retorno = _map.Map<IEnumerable<ProfessorDto>>(professores);
 
             return Ok(retorno);
         }

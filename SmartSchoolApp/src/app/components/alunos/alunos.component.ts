@@ -62,14 +62,29 @@ export class AlunosComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.carregarAlunos();
   }
-  
+
   criarForm() {
     this.alunoForm = this.fb.group({
       id: [0],
       nome: ['', Validators.required],
       sobrenome: ['', Validators.required],
-      telefone: ['', Validators.required]
+      telefone: ['', Validators.required],
+      ativo: []
     });
+  }
+
+  trocarEstado(aluno : Aluno){
+    this.alunoService.trocarEstado(aluno.id, !aluno.ativo)
+    .pipe(takeUntil(this.unsubscriber))
+    .subscribe(
+      () => {
+        this.carregarAlunos();
+        this.toastr.success('Aluno salvo com sucesso!');
+      }, (error: any) => {
+        this.toastr.error(`Erro: Aluno não pode ser salvo!`);
+        console.error(error);
+      }, () => this.spinner.hide()
+    );
   }
 
   saveAluno() {
@@ -107,7 +122,7 @@ export class AlunosComponent implements OnInit, OnDestroy {
         this.alunos = alunos;
 
         if (id > 0) {
-          this.alunoSelect(this.alunos.find(aluno => aluno.id === id));
+          this.alunoSelect(id);
         }
 
         this.toastr.success('Alunos foram carregado com Sucesso!');
@@ -118,10 +133,22 @@ export class AlunosComponent implements OnInit, OnDestroy {
     );
   }
 
-  alunoSelect(aluno: Aluno) {
-    this.modeSave = 'put';
-    this.alunoSelecionado = aluno;
-    this.alunoForm.patchValue(aluno);
+  alunoSelect(alunoId: number) {
+    this.modeSave = 'patch';
+    this.alunoService.getById(alunoId).subscribe(
+      (alunoReturn) => {
+        this.alunoSelecionado = alunoReturn;
+        this.toastr.success('Alunos carregados com sucesso!');
+        this.alunoForm.patchValue(this.alunoSelecionado);
+      },
+      (error) => {
+        this.toastr.error('Alunos não carregados!');
+        console.error(error);
+        this.spinner.hide();
+
+      },
+      () => this.spinner.hide()
+      )
   }
 
 
